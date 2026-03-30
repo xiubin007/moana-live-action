@@ -1,0 +1,306 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const latestNews = [
+  {
+    title: "Moana Live Action Release Date Confirmed for July 2026",
+    date: "2026-03-30",
+    summary: "Disney has officially confirmed that the live action remake of Moana will hit theaters on July 10, 2026."
+  },
+  {
+    title: "Catherine Laga'aia Cast as Moana",
+    date: "2026-02-15",
+    summary: "New Zealand actress Catherine Laga'aia has been announced as the lead role of Moana in the upcoming live action adaptation."
+  },
+  {
+    title: "Dwayne Johnson Returns as Maui",
+    date: "2026-01-20",
+    summary: "Dwayne 'The Rock' Johnson will reprise his role as the demigod Maui in the live action version."
+  }
+];
+
+const releaseDate = new Date('2026-07-10');
+const today = new Date();
+const daysUntilRelease = Math.ceil((releaseDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+---
+
+<BaseLayout title="Moana Live Action Movie - Release Date, Cast & Trailers (2026)">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Moana Live Action</h1>
+      <p class="subtitle">Disney's Epic Remake Coming July 2026</p>
+      <div class="countdown">
+        <span class="countdown-number">{daysUntilRelease}</span>
+        <span class="countdown-text">days until release</span>
+      </div>
+      <div class="hero-buttons">
+        <a href="/trailers" class="btn btn-primary">Watch Trailers</a>
+        <a href="/cast" class="btn btn-secondary">Meet the Cast</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="quick-links">
+    <div class="container">
+      <div class="links-grid">
+        <a href="/release-date" class="link-card">
+          <span class="icon">📅</span>
+          <h3>Release Date</h3>
+          <p>Find out when Moana hits theaters in your country</p>
+        </a>
+        <a href="/cast" class="link-card">
+          <span class="icon">👥</span>
+          <h3>Full Cast</h3>
+          <p>Meet the actors bringing your favorite characters to life</p>
+        </a>
+        <a href="/trailers" class="link-card">
+          <span class="icon">🎬</span>
+          <h3>Trailers</h3>
+          <p>Watch all official trailers and teasers</p>
+        </a>
+        <a href="/plot" class="link-card">
+          <span class="icon">📖</span>
+          <h3>Plot & Story</h3>
+          <p>Everything we know about the storyline</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News -->
+  <section class="latest-news">
+    <div class="container">
+      <h2>Latest News</h2>
+      <div class="news-grid">
+        {latestNews.map(news => (
+          <article class="news-card">
+            <time datetime={news.date}>{new Date(news.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
+            <h3>{news.title}</h3>
+            <p>{news.summary}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content -->
+  <section class="seo-content">
+    <div class="container">
+      <h2>What is Moana Live Action?</h2>
+      <p>Disney's Moana live action remake is an upcoming film adaptation of the beloved 2016 animated movie. The live action version will bring the magical story of Moana, a brave young Polynesian girl who sets sail on a daring adventure to save her people, to life with real actors and stunning visual effects.</p>
+      
+      <h3>When is Moana Live Action Coming Out?</h3>
+      <p>The Moana live action movie is scheduled to be released in theaters on <strong>July 10, 2026</strong>. The film will first have a theatrical run before eventually coming to Disney+ for streaming.</p>
+      
+      <h3>Who Stars in Moana Live Action?</h3>
+      <p>The cast includes <strong>Catherine Laga'aia</strong> as Moana and <strong>Dwayne "The Rock" Johnson</strong> reprising his role as the charismatic demigod Maui. The film features a diverse cast of Pacific Islander actors bringing the vibrant world of ancient Polynesia to life.</p>
+      
+      <h3>Is Moana Live Action a Musical?</h3>
+      <p>Yes! The live action remake will feature the iconic songs from the original animated film, including the Oscar-nominated "How Far I'll Go" and the fan-favorite "You're Welcome." New songs may also be added to the soundtrack.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #0077be 0%, #00a8cc 50%, #00d4aa 100%);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+  
+  .countdown {
+    margin: 2rem 0;
+  }
+  
+  .countdown-number {
+    display: block;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .countdown-text {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  
+  .btn-primary {
+    background: white;
+    color: var(--primary);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .quick-links {
+    padding: 4rem 0;
+    background: white;
+  }
+  
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .link-card {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+    color: var(--text);
+  }
+  
+  .link-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+  
+  .link-card .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .link-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .link-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
+  .latest-news {
+    padding: 4rem 0;
+  }
+  
+  .latest-news h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark);
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .news-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .news-card time {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  
+  .news-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .news-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+  
+  .seo-content {
+    padding: 4rem 0;
+    background: white;
+  }
+  
+  .seo-content .container {
+    max-width: 800px;
+  }
+  
+  .seo-content h2 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+  
+  .seo-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+  
+  .seo-content p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .countdown-number {
+      font-size: 3rem;
+    }
+  }
+</style>

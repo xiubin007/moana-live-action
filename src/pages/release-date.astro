@@ -1,0 +1,402 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const releaseDates = [
+  {
+    region: "United States",
+    date: "July 10, 2026",
+    format: "Theatrical"
+  },
+  {
+    region: "United Kingdom",
+    date: "July 10, 2026",
+    format: "Theatrical"
+  },
+  {
+    region: "Canada",
+    date: "July 10, 2026",
+    format: "Theatrical"
+  },
+  {
+    region: "Australia",
+    date: "July 9, 2026",
+    format: "Theatrical"
+  },
+  {
+    region: "New Zealand",
+    date: "July 9, 2026",
+    format: "Theatrical"
+  },
+  {
+    region: "China",
+    date: "July 2026 (TBA)",
+    format: "Theatrical"
+  },
+  {
+    region: "Japan",
+    date: "August 2026 (TBA)",
+    format: "Theatrical"
+  },
+  {
+    region: "Germany",
+    date: "July 16, 2026",
+    format: "Theatrical"
+  },
+  {
+    region: "France",
+    date: "July 15, 2026",
+    format: "Theatrical"
+  },
+  {
+    region: "India",
+    date: "July 10, 2026",
+    format: "Theatrical"
+  }
+];
+
+const releaseDate = new Date('2026-07-10');
+const today = new Date();
+const daysUntilRelease = Math.ceil((releaseDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+---
+
+<BaseLayout title="Moana Live Action Release Date - When Does It Come Out? (2026)">
+  <section class="page-header">
+    <div class="container">
+      <h1>Moana Live Action Release Date</h1>
+      <p>Find out when Moana hits theaters in your country</p>
+    </div>
+  </section>
+
+  <section class="countdown-section">
+    <div class="container">
+      <div class="countdown-box">
+        <h2>Countdown to Release</h2>
+        <div class="countdown-display">
+          <span class="countdown-number">{daysUntilRelease}</span>
+          <span class="countdown-label">days</span>
+        </div>
+        <p class="release-date-text">July 10, 2026 - Theatrical Release</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="dates-section">
+    <div class="container">
+      <h2>Release Dates by Country</h2>
+      <div class="dates-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Region</th>
+              <th>Release Date</th>
+              <th>Format</th>
+            </tr>
+          </thead>
+          <tbody>
+            {releaseDates.map(item => (
+              <tr>
+                <td>{item.region}</td>
+                <td>{item.date}</td>
+                <td>{item.format}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="note">* Dates are subject to change. TBA = To Be Announced.</p>
+    </div>
+  </section>
+
+  <section class="timeline-section">
+    <div class="container">
+      <h2>Moana Live Action Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">September 2023</div>
+          <div class="timeline-content">
+            <h3>Project Announced</h3>
+            <p>Disney officially announces the live action remake of Moana.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">February 2026</div>
+          <div class="timeline-content">
+            <h3>Cast Revealed</h3>
+            <p>Catherine Laga'aia is announced as Moana, with Dwayne Johnson returning as Maui.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">March 2026</div>
+          <div class="timeline-content">
+            <h3>First Trailer Released</h3>
+            <p>The first official trailer for Moana live action drops online.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">July 10, 2026</div>
+          <div class="timeline-content">
+            <h3>Theatrical Release</h3>
+            <p>Moana live action premieres in theaters worldwide.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Fall 2026 (Expected)</div>
+          <div class="timeline-content">
+            <h3>Disney+ Release</h3>
+            <p>The film will be available for streaming on Disney+.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-content">
+    <div class="container">
+      <h2>When Does Moana Live Action Come Out?</h2>
+      <p>Disney's Moana live action remake is scheduled to be released in theaters on <strong>July 10, 2026</strong>. This date applies to major markets including the United States, United Kingdom, Canada, and India. Some countries may have slightly different release dates.</p>
+      
+      <h3>Will Moana Live Action Be on Disney+?</h3>
+      <p>Yes, the Moana live action movie will eventually be available on Disney+. Following Disney's typical release pattern, the film will first have an exclusive theatrical run of approximately 45-90 days before becoming available on the Disney+ streaming platform. This is expected to happen in <strong>late 2026</strong>.</p>
+      
+      <h3>Is Moana Live Action Coming to Theaters?</h3>
+      <p>Absolutely! Moana live action is confirmed for a <strong>wide theatrical release</strong> starting July 10, 2026. The film will be shown in theaters worldwide, including IMAX and premium format screens for the best viewing experience.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #0077be 0%, #00d4aa 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-header p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+  }
+  
+  .countdown-section {
+    padding: 4rem 0;
+    background: var(--light);
+  }
+  
+  .countdown-box {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .countdown-box h2 {
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+  }
+  
+  .countdown-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .countdown-number {
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--primary);
+    line-height: 1;
+  }
+  
+  .countdown-label {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+  }
+  
+  .release-date-text {
+    font-size: 1.2rem;
+    color: var(--text);
+    font-weight: 500;
+  }
+  
+  .dates-section {
+    padding: 4rem 0;
+  }
+  
+  .dates-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark);
+  }
+  
+  .dates-table {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  th {
+    background: var(--dark);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  tr:hover {
+    background: #f8f9fa;
+  }
+  
+  .note {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  
+  .timeline-section {
+    padding: 4rem 0;
+    background: var(--light);
+  }
+  
+  .timeline-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark);
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 2px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  
+  .timeline-date {
+    width: 45%;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary);
+  }
+  
+  .timeline-content {
+    width: 45%;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .timeline-content h3 {
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+  
+  .seo-content {
+    padding: 4rem 0;
+    background: white;
+  }
+  
+  .seo-content .container {
+    max-width: 800px;
+  }
+  
+  .seo-content h2 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+  
+  .seo-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+  
+  .seo-content p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+    
+    .countdown-number {
+      font-size: 3.5rem;
+    }
+    
+    .timeline::before {
+      left: 20px;
+    }
+    
+    .timeline-item,
+    .timeline-item:nth-child(odd) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 50px;
+    }
+    
+    .timeline-date,
+    .timeline-content {
+      width: 100%;
+    }
+    
+    .timeline-date {
+      text-align: left;
+      padding-left: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>

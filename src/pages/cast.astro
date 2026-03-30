@@ -1,0 +1,295 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const cast = [
+  {
+    name: "Catherine Laga'aia",
+    role: "Moana",
+    animatedVoice: "Auli'i Cravalho",
+    bio: "New Zealand actress of Samoan descent, making her feature film debut as the beloved heroine Moana.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Placeholder_face.svg/300px-Placeholder_face.svg.png"
+  },
+  {
+    name: "Dwayne Johnson",
+    role: "Maui",
+    animatedVoice: "Dwayne Johnson",
+    bio: "Returning to voice the charismatic demigod Maui, Dwayne Johnson brings his star power and Polynesian heritage to the live action adaptation.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Dwayne_Johnson_2%2C_2013.jpg/300px-Dwayne_Johnson_2%2C_2013.jpg"
+  },
+  {
+    name: "Temuera Morrison",
+    role: "Chief Tui",
+    animatedVoice: "Temuera Morrison",
+    bio: "Iconic New Zealand actor returning to play Moana's father, the chief of Motunui island.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Placeholder_face.svg/300px-Placeholder_face.svg.png"
+  },
+  {
+    name: "Nicole Scherzinger",
+    role: "Sina",
+    animatedVoice: "Nicole Scherzinger",
+    bio: "Singer and actress returning as Moana's loving and supportive mother.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Placeholder_face.svg/300px-Placeholder_face.svg.png"
+  },
+  {
+    name: "Rachel House",
+    role: "Gramma Tala",
+    animatedVoice: "Rachel House",
+    bio: "Acclaimed New Zealand actress bringing back the wise and spirited grandmother who guides Moana on her journey.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Placeholder_face.svg/300px-Placeholder_face.svg.png"
+  },
+  {
+    name: "Alan Tudyk",
+    role: "Heihei (Voice)",
+    animatedVoice: "Alan Tudyk",
+    bio: "Voice actor extraordinaire returning as the lovable and hilariously clueless rooster Heihei.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Placeholder_face.svg/300px-Placeholder_face.svg.png"
+  }
+];
+---
+
+<BaseLayout title="Moana Live Action Cast - Full Actor List & Characters (2026)">
+  <section class="page-header">
+    <div class="container">
+      <h1>Moana Live Action Cast</h1>
+      <p>Meet the talented actors bringing your favorite characters to life</p>
+    </div>
+  </section>
+
+  <section class="cast-section">
+    <div class="container">
+      <div class="cast-grid">
+        {cast.map(actor => (
+          <div class="cast-card">
+            <div class="cast-image">
+              <img src={actor.image} alt={actor.name} loading="lazy" />
+            </div>
+            <div class="cast-info">
+              <h2>{actor.name}</h2>
+              <p class="role">as {actor.role}</p>
+              <p class="animated-version">Originally voiced by: {actor.animatedVoice}</p>
+              <p class="bio">{actor.bio}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="comparison-section">
+    <div class="container">
+      <h2>Live Action vs Animated Cast</h2>
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Character</th>
+              <th>Animated Voice (2016)</th>
+              <th>Live Action (2026)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Moana</td>
+              <td>Auli'i Cravalho</td>
+              <td>Catherine Laga'aia</td>
+            </tr>
+            <tr>
+              <td>Maui</td>
+              <td>Dwayne Johnson</td>
+              <td>Dwayne Johnson</td>
+            </tr>
+            <tr>
+              <td>Chief Tui</td>
+              <td>Temuera Morrison</td>
+              <td>Temuera Morrison</td>
+            </tr>
+            <tr>
+              <td>Sina</td>
+              <td>Nicole Scherzinger</td>
+              <td>Nicole Scherzinger</td>
+            </tr>
+            <tr>
+              <td>Gramma Tala</td>
+              <td>Rachel House</td>
+              <td>Rachel House</td>
+            </tr>
+            <tr>
+              <td>Heihei</td>
+              <td>Alan Tudyk</td>
+              <td>Alan Tudyk</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-content">
+    <div class="container">
+      <h2>Who Plays Moana in the Live Action?</h2>
+      <p>The role of Moana in the live action adaptation is played by <strong>Catherine Laga'aia</strong>, a talented young actress from New Zealand with Samoan heritage. This will be her feature film debut, and she's already generating excitement among fans of the original animated movie.</p>
+      
+      <h3>Is Dwayne Johnson in Moana Live Action?</h3>
+      <p>Yes! <strong>Dwayne "The Rock" Johnson</strong> is confirmed to reprise his role as the demigod Maui in the live action remake. Johnson, who has Polynesian heritage himself, was a fan favorite in the original animated film and his return has been highly anticipated.</p>
+      
+      <h3>Full Cast List</h3>
+      <p>The Moana live action cast features a diverse group of actors, many of whom have Pacific Islander backgrounds. The film aims to authentically represent Polynesian culture while bringing the beloved animated characters to life on the big screen.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #0077be 0%, #00d4aa 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-header p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+  }
+  
+  .cast-section {
+    padding: 4rem 0;
+  }
+  
+  .cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .cast-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cast-image {
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .cast-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cast-info {
+    padding: 1.5rem;
+  }
+  
+  .cast-info h2 {
+    color: var(--dark);
+    margin-bottom: 0.25rem;
+  }
+  
+  .role {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .animated-version {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .bio {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  .comparison-section {
+    padding: 4rem 0;
+    background: var(--light);
+  }
+  
+  .comparison-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark);
+  }
+  
+  .comparison-table {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  th {
+    background: var(--dark);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  tr:hover {
+    background: #f8f9fa;
+  }
+  
+  .seo-content {
+    padding: 4rem 0;
+    background: white;
+  }
+  
+  .seo-content .container {
+    max-width: 800px;
+  }
+  
+  .seo-content h2 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+  
+  .seo-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+  
+  .seo-content p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+    
+    .cast-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

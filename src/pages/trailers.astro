@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const trailers = [
+  {
+    title: "Official Teaser Trailer",
+    date: "March 15, 2026",
+    description: "The first official teaser trailer for Moana live action, giving us our first look at the stunning visual adaptation of the beloved animated film.",
+    youtubeId: "dQw4w9WgXcQ", // Placeholder - replace with actual YouTube ID
+    duration: "1:32"
+  },
+  {
+    title: "Official Trailer",
+    date: "May 1, 2026",
+    description: "The full official trailer showcasing more of the story, action sequences, and the incredible performances from the cast.",
+    youtubeId: "dQw4w9WgXcQ", // Placeholder
+    duration: "2:45"
+  }
+];
+---
+
+<BaseLayout title="Moana Live Action Trailers - Watch All Official Trailers (2026)">
+  <section class="page-header">
+    <div class="container">
+      <h1>Moana Live Action Trailers</h1>
+      <p>Watch all official trailers and teasers</p>
+    </div>
+  </section>
+
+  <section class="trailers-section">
+    <div class="container">
+      {trailers.map((trailer, index) => (
+        <div class={`trailer-card ${index === 0 ? 'featured' : ''}`}>
+          <div class="video-container">
+            <iframe 
+              src={`https://www.youtube.com/embed/${trailer.youtubeId}`}
+              title={trailer.title}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="trailer-info">
+            <span class="trailer-date">{trailer.date}</span>
+            <h2>{trailer.title}</h2>
+            <p>{trailer.description}</p>
+            <span class="trailer-duration">Duration: {trailer.duration}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="breakdown-section">
+    <div class="container">
+      <h2>Trailer Breakdown</h2>
+      
+      <div class="breakdown-card">
+        <h3>What We See in the Teaser</h3>
+        <ul>
+          <li><strong>Stunning Ocean Visuals</strong> - The teaser opens with breathtaking shots of the Pacific Ocean, showcasing the incredible visual effects that bring the animated film's water sequences to life.</li>
+          <li><strong>Moana's Island Home</strong> - We get our first look at the island of Motunui, recreated in stunning detail with lush tropical landscapes.</li>
+          <li><strong>Character Reveals</strong> - The teaser introduces us to Catherine Laga'aia as Moana and gives us glimpses of Dwayne Johnson as the larger-than-life demigod Maui.</li>
+          <li><strong>Iconic Moments</strong> - Several beloved scenes from the animated film are recreated, including the memorable boat sequences and the encounter with the Kakamora.</li>
+        </ul>
+      </div>
+      
+      <div class="breakdown-card">
+        <h3>Music & Songs</h3>
+        <p>The trailers feature snippets of the iconic songs from the original film, including "How Far I'll Go" and "You're Welcome." The live action version will include both the original songs and new additions to the soundtrack.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-content">
+    <div class="container">
+      <h2>Where to Watch Moana Live Action Trailers</h2>
+      <p>All official Moana live action trailers are available on this page and on Disney's official YouTube channel. The first teaser trailer was released in March 2026, giving fans their first glimpse of the highly anticipated remake.</p>
+      
+      <h3>How Many Trailers Will There Be?</h3>
+      <p>Following Disney's typical marketing pattern, we can expect approximately 2-3 official trailers plus several TV spots and featurettes before the July 2026 release. The full trailer is expected to drop about 2-3 months before the film's premiere.</p>
+      
+      <h3>What Songs Are in the Moana Live Action Trailer?</h3>
+      <p>The trailers feature instrumental versions of the beloved songs from the original film. The full soundtrack, including both classic songs and new additions, will be released closer to the film's premiere date.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #0077be 0%, #00d4aa 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-header p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+  }
+  
+  .trailers-section {
+    padding: 4rem 0;
+  }
+  
+  .trailer-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+  }
+  
+  .trailer-card.featured {
+    border: 2px solid var(--primary);
+  }
+  
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .trailer-info {
+    padding: 1.5rem;
+  }
+  
+  .trailer-date {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  
+  .trailer-info h2 {
+    color: var(--dark);
+    margin: 0.5rem 0;
+  }
+  
+  .trailer-info p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  .trailer-duration {
+    display: inline-block;
+    background: var(--light);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+  
+  .breakdown-section {
+    padding: 4rem 0;
+    background: var(--light);
+  }
+  
+  .breakdown-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark);
+  }
+  
+  .breakdown-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .breakdown-card h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+  
+  .breakdown-card ul {
+    padding-left: 1.5rem;
+  }
+  
+  .breakdown-card li {
+    margin-bottom: 0.75rem;
+    color: var(--text-light);
+  }
+  
+  .breakdown-card li strong {
+    color: var(--text);
+  }
+  
+  .breakdown-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  .seo-content {
+    padding: 4rem 0;
+    background: white;
+  }
+  
+  .seo-content .container {
+    max-width: 800px;
+  }
+  
+  .seo-content h2 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+  
+  .seo-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+  
+  .seo-content p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
