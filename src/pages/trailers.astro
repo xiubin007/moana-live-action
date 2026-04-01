@@ -3,17 +3,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const trailers = [
   {
-    title: "Official Teaser Trailer",
+    title: "Official Trailer",
     date: "March 15, 2026",
-    description: "The first official teaser trailer for Moana live action, giving us our first look at the stunning visual adaptation of the beloved animated film.",
-    youtubeId: "dQw4w9WgXcQ", // Placeholder - replace with actual YouTube ID
-    duration: "1:32"
+    description: "The official trailer from Disney for the Moana live action remake, giving us our first look at the stunning visual adaptation of the beloved animated film.",
+    youtubeId: "n7f6hlKsxxo",
+    duration: "2:30"
   },
   {
-    title: "Official Trailer",
+    title: "Official Trailer (2026) Dwayne Johnson",
     date: "May 1, 2026",
     description: "The full official trailer showcasing more of the story, action sequences, and the incredible performances from the cast.",
-    youtubeId: "dQw4w9WgXcQ", // Placeholder
+    youtubeId: "eLLqCqpD2Yk",
     duration: "2:45"
   }
 ];
@@ -36,7 +36,8 @@ const trailers = [
               src={`https://www.youtube.com/embed/${trailer.youtubeId}`}
               title={trailer.title}
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
           </div>
@@ -56,11 +57,11 @@ const trailers = [
       <h2>Trailer Breakdown</h2>
       
       <div class="breakdown-card">
-        <h3>What We See in the Teaser</h3>
+        <h3>What We See in the Trailer</h3>
         <ul>
-          <li><strong>Stunning Ocean Visuals</strong> - The teaser opens with breathtaking shots of the Pacific Ocean, showcasing the incredible visual effects that bring the animated film's water sequences to life.</li>
+          <li><strong>Stunning Ocean Visuals</strong> - The trailer opens with breathtaking shots of the Pacific Ocean, showcasing the incredible visual effects that bring the animated film's water sequences to life.</li>
           <li><strong>Moana's Island Home</strong> - We get our first look at the island of Motunui, recreated in stunning detail with lush tropical landscapes.</li>
-          <li><strong>Character Reveals</strong> - The teaser introduces us to Catherine Laga'aia as Moana and gives us glimpses of Dwayne Johnson as the larger-than-life demigod Maui.</li>
+          <li><strong>Character Reveals</strong> - The trailer introduces us to Catherine Laga'aia as Moana and gives us glimpses of Dwayne Johnson as the larger-than-life demigod Maui.</li>
           <li><strong>Iconic Moments</strong> - Several beloved scenes from the animated film are recreated, including the memorable boat sequences and the encounter with the Kakamora.</li>
         </ul>
       </div>
@@ -122,8 +123,10 @@ const trailers = [
   
   .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
     height: 0;
+    background: #000;
   }
   
   .video-container iframe {
@@ -132,6 +135,7 @@ const trailers = [
     left: 0;
     width: 100%;
     height: 100%;
+    border: none;
   }
   
   .trailer-info {
