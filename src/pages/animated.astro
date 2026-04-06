@@ -1,0 +1,329 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Watch Moana Animated (2016) - Full Original Movie Online"
+  description="Watch the original Moana animated movie (2016) online. The beloved Disney classic starring Auli'i Cravalho and Dwayne Johnson that inspired the 2026 live action remake."
+  keywords="watch moana 2016 online, moana animated movie, moana full movie, moana 2016 disney, watch moana free, moana original movie"
+>
+  <section class="page-header">
+    <div class="container">
+      <h1>🎬 Moana Animated (2016)</h1>
+      <p>Watch the original animated movie that started it all</p>
+    </div>
+  </section>
+
+  <!-- Video Player -->
+  <section class="video-section">
+    <div class="container">
+      <div class="player-wrapper">
+        <div class="video-item">
+          <div class="video-container">
+            <iframe
+              src="https://vidsrc.icu/embed/movie/tt3521164"
+              title="Moana Full Movie (2016)"
+              frameborder="0"
+              allowfullscreen
+              allow="autoplay; encrypted-media"
+              referrerpolicy="no-referrer"
+            ></iframe>
+          </div>
+          <div class="video-info">
+            <span class="badge">Original</span>
+            <h2>Moana (2016)</h2>
+            <p>Experience the original animated adventure. Follow Moana on her epic journey across the Pacific Ocean to save her island and discover her true destiny.</p>
+            <div class="video-meta">
+              <span>⏱️ 1h 47m</span>
+              <span>📅 2016</span>
+              <span>⭐ 7.6/10 IMDb</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="notice">
+          <p>💡 Click the <strong>CC/Subtitles</strong> button in the player to toggle subtitles in different languages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Movie Info -->
+  <section class="info-section">
+    <div class="container">
+      <h2>About the Original Movie</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>🌊 The Story</h3>
+          <p>Moana Waialiki is a sea voyaging enthusiast and the only daughter of a chief in a long line of navigators. When her island's fisherman can't catch any fish and the crops fail, she learns that the demigod Maui caused the blight by stealing the heart of the goddess Te Fiti. The only way to heal the island is to persuade Maui to return Te Fiti's heart, so Moana sets off on an epic journey across the Pacific.</p>
+        </div>
+        <div class="info-card">
+          <h3>🎵 Iconic Songs</h3>
+          <ul>
+            <li><strong>"How Far I'll Go"</strong> — Moana's powerful anthem</li>
+            <li><strong>"You're Welcome"</strong> — Maui's boastful & catchy tune</li>
+            <li><strong>"We Know the Way"</strong> — The Wayfinding song</li>
+            <li><strong>"Shiny"</strong> — Tamatoa's showstopper</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>🏆 Awards</h3>
+          <ul>
+            <li>Academy Award Nominee — Best Animated Feature</li>
+            <li>Academy Award Nominee — Best Original Song</li>
+            <li>Golden Globe Nominee — Best Animated Feature</li>
+            <li>BAFTA Nominee — Best Animated Film</li>
+            <li>Grammy Winner — Best Song Written for Visual Media</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="comparison-section">
+    <div class="container">
+      <h2>Animated vs Live Action</h2>
+      <div class="comparison-grid">
+        <div class="compare-card animated-card">
+          <h3>🎨 Animated (2016)</h3>
+          <ul>
+            <li>Hand-drawn inspiration with CGI</li>
+            <li>Auli'i Cravalho as Moana</li>
+            <li>Dwayne Johnson as Maui</li>
+            <li>Won hearts worldwide</li>
+            <li>$690M+ box office</li>
+          </ul>
+        </div>
+        <div class="compare-card live-card">
+          <h3>🎥 Live Action (2026)</h3>
+          <ul>
+            <li>Real actors + cutting-edge VFX</li>
+            <li>Catherine Laga'aia as Moana</li>
+            <li>Dwayne Johnson returns as Maui</li>
+            <li>Bringing the story to life</li>
+            <li>Coming July 10, 2026</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #0077be 0%, #00d4aa 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-header p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+  }
+
+  /* Video Section */
+  .video-section {
+    padding: 2rem 0;
+    background: var(--dark);
+  }
+
+  .player-wrapper {
+    position: relative;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    background: #000;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .video-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .video-info h2 {
+    color: var(--dark);
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  .video-info p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .video-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+
+  .notice {
+    margin-top: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+  }
+
+  .notice p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+  }
+
+  .notice strong {
+    color: white;
+  }
+
+  /* Info Section */
+  .info-section {
+    padding: 4rem 0;
+    background: white;
+  }
+
+  .info-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark);
+    font-size: 2rem;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .info-card h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .info-card p,
+  .info-card li {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .info-card ul {
+    padding-left: 1.5rem;
+  }
+
+  .info-card li {
+    margin-bottom: 0.5rem;
+  }
+
+  .info-card li strong {
+    color: var(--text);
+  }
+
+  /* Comparison */
+  .comparison-section {
+    padding: 4rem 0;
+    background: var(--light);
+  }
+
+  .comparison-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark);
+    font-size: 2rem;
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .compare-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .compare-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .animated-card h3 {
+    color: #2ecc71;
+  }
+
+  .live-card h3 {
+    color: var(--primary);
+  }
+
+  .compare-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+
+  .compare-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--light);
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+
+  .compare-card li:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .video-meta {
+      gap: 1rem;
+    }
+  }
+</style>

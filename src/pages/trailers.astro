@@ -3,27 +3,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const trailers = [
   {
-    title: "Official Trailer",
-    date: "March 15, 2026",
-    description: "The official trailer from Disney for the Moana live action remake, giving us our first look at the stunning visual adaptation of the beloved animated film.",
-    youtubeId: "n7f6hlKsxxo",
-    duration: "2:30"
+    title: "Moana Official Teaser",
+    date: "2026",
+    description: "The first official teaser for the live action adaptation of Disney's beloved Moana. Get your first look at the stunning real-world recreation of the Pacific Ocean adventure.",
+    youtubeId: "QKYFfYLe5rs",
+    duration: "2:00"
   },
   {
-    title: "Official Trailer (2026) Dwayne Johnson",
-    date: "May 1, 2026",
-    description: "The full official trailer showcasing more of the story, action sequences, and the incredible performances from the cast.",
-    youtubeId: "eLLqCqpD2Yk",
-    duration: "2:45"
+    title: "Moana | Official Teaser",
+    date: "2026",
+    description: "The official teaser for Disney's Moana live action remake, bringing the animated classic to life with real actors and breathtaking visual effects.",
+    youtubeId: "n7f6hlKsxxo",
+    duration: "2:30"
   }
 ];
 ---
 
-<BaseLayout title="Moana Live Action Trailers - Watch All Official Trailers (2026)">
+<BaseLayout
+  title="Moana Live Action Trailers - Watch Official Disney Trailers (2026)"
+  description="Watch all official Moana live action trailers and teasers. See the first footage of Disney's 2026 live action remake starring Catherine Laga'aia and Dwayne Johnson."
+  keywords="moana live action trailer, moana 2026 teaser, moana official trailer, disney moana trailer, watch moana trailer, moana movie preview"
+>
   <section class="page-header">
     <div class="container">
-      <h1>Moana Live Action Trailers</h1>
-      <p>Watch all official trailers and teasers</p>
+      <h1>🎬 Moana Trailers</h1>
+      <p>Watch all official Disney trailers — Moana (2016) & Moana Live Action (2026)</p>
     </div>
   </section>
 
@@ -36,9 +40,9 @@ const trailers = [
               src={`https://www.youtube.com/embed/${trailer.youtubeId}`}
               title={trailer.title}
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
+              allow="fullscreen"
               allowfullscreen
+              sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
             ></iframe>
           </div>
           <div class="trailer-info">

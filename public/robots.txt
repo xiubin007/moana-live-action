@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moana-live-action.online/sitemap.xml

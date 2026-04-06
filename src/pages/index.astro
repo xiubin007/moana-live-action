@@ -24,7 +24,11 @@ const today = new Date();
 const daysUntilRelease = Math.ceil((releaseDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
 ---
 
-<BaseLayout title="Moana Live Action Movie - Release Date, Cast & Trailers (2026)">
+<BaseLayout
+  title="Moana Live Action (2026) - Disney Remake: Release Date, Cast & Trailers"
+  description="Your complete guide to Disney's Moana live action remake (2026). Starring Catherine Laga'aia as Moana and Dwayne Johnson as Maui. Release date: July 10, 2026. Watch trailers, meet the cast, and explore the story."
+  keywords="moana live action, moana 2026, disney moana remake, moana movie 2026, catherine laga'aia moana, dwayne johnson maui, moana release date, moana trailer, disney live action"
+>
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
@@ -36,6 +40,7 @@ const daysUntilRelease = Math.ceil((releaseDate.getTime() - today.getTime()) / (
       </div>
       <div class="hero-buttons">
         <a href="/trailers" class="btn btn-primary">Watch Trailers</a>
+        <a href="/animated" class="btn btn-animated">🎬 Animated</a>
         <a href="/cast" class="btn btn-secondary">Meet the Cast</a>
       </div>
     </div>
@@ -171,6 +176,17 @@ const daysUntilRelease = Math.ceil((releaseDate.getTime() - today.getTime()) / (
   
   .btn-primary:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-animated {
+    background: linear-gradient(135deg, #f39c12, #e74c3c);
+    color: white;
+  }
+  
+  .btn-animated:hover {
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+    text-decoration: none;
+    transform: translateY(-2px);
   }
   
   .btn-secondary {
