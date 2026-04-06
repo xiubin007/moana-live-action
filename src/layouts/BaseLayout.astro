@@ -103,6 +103,15 @@ const breadcrumbSchema = {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN6P5PSMZ2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PN6P5PSMZ2');
+  </script>
+
   <!-- Primary SEO Meta -->
   <title>{title}</title>
   <meta name="description" content={description}>
@@ -173,6 +182,11 @@ const breadcrumbSchema = {
         <a href="/animated">Animated</a>
         <a href="/plot">Plot</a>
         <a href="/where-to-watch">Where to Watch</a>
+      </nav>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/contact">Contact</a>
       </nav>
     </div>
   </footer>
@@ -331,6 +345,26 @@ const breadcrumbSchema = {
   }
 
   .footer-links a:hover {
+    color: white;
+  }
+
+  .footer-legal {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-legal a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    transition: color 0.2s;
+  }
+
+  .footer-legal a:hover {
     color: white;
   }
 

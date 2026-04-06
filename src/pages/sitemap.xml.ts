@@ -12,6 +12,9 @@ export async function GET() {
     { url: '/where-to-watch', priority: '0.8', changefreq: 'weekly' },
     { url: '/plot', priority: '0.7', changefreq: 'monthly' },
     { url: '/animated', priority: '0.7', changefreq: 'monthly' },
+    { url: '/privacy-policy', priority: '0.3', changefreq: 'yearly' },
+    { url: '/terms-of-service', priority: '0.3', changefreq: 'yearly' },
+    { url: '/contact', priority: '0.4', changefreq: 'yearly' },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

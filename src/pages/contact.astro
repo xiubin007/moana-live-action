@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Us - Moana Live Action"
+  description="Get in touch with the team behind moana-live-action.online. Questions, feedback, or partnership inquiries welcome."
+  keywords="moana live action contact, contact us, website feedback"
+>
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you!</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-wrapper">
+
+        <h2>Get in Touch</h2>
+        <p>Have a question, suggestion, or want to collaborate? Feel free to reach out through any of the channels below.</p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <span class="contact-icon">📧</span>
+            <h3>Email</h3>
+            <p><a href="mailto:contact@moana-live-action.online">contact@moana-live-action.online</a></p>
+            <p class="contact-note">For general inquiries, feedback, and partnership proposals.</p>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-icon">⏱️</span>
+            <h3>Response Time</h3>
+            <p>We typically respond within 24-48 hours.</p>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-icon">🤝</span>
+            <h3>Partnerships</h3>
+            <p>Interested in advertising, guest posting, or content partnerships? Email us with the subject line "Partnership Inquiry."</p>
+          </div>
+        </div>
+
+        <h2>Common Questions</h2>
+
+        <div class="faq-item">
+          <h3>Is this an official Disney website?</h3>
+          <p>No. moana-live-action.online is a fan-made informational resource. We are not affiliated with, endorsed by, or connected to The Walt Disney Company. For official information, please visit <a href="https://disney.com" target="_blank" rel="noopener noreferrer">disney.com</a>.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I use your content on my website?</h3>
+          <p>Original content on this website is protected by copyright. You may not reproduce or redistribute our content without written permission. You are welcome to link to our pages.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>I found an error on the site. How do I report it?</h3>
+          <p>We appreciate corrections! Please email us at <a href="mailto:contact@moana-live-action.online">contact@moana-live-action.online</a> with the details, and we'll update the information promptly.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do I request content removal?</h3>
+          <p>If you believe any content on our website infringes on your rights, please contact us with the specific URL and description of the content in question, and we will review and address your request promptly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #0077be 0%, #00d4aa 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .page-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .page-header p { opacity: 0.9; font-size: 1.1rem; }
+
+  .content-section {
+    padding: 4rem 0;
+    background: white;
+  }
+  .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .content-wrapper h2 {
+    color: var(--dark);
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .content-wrapper h3 {
+    color: var(--dark);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .content-wrapper p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  .content-wrapper a {
+    color: var(--primary);
+  }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .contact-card {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+  }
+  .contact-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .contact-card h3 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .contact-note {
+    font-size: 0.9rem !important;
+    color: var(--text-light) !important;
+  }
+
+  .faq-item {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+  }
+  .faq-item h3 {
+    color: var(--dark);
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .page-header h1 { font-size: 2rem; }
+  }
+</style>

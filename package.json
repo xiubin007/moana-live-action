@@ -4,10 +4,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && python3 scripts/fix-routes.py",
     "preview": "astro preview",
-    "deploy": "npm run build && wrangler pages deploy dist",
-    "postbuild": "python3 -c \"import json,shutil,os; f=\\\"dist/_routes.json\\\"; d=json.load(open(f)); d[\\\"exclude\\\"]=list(set(d.get(\\\"exclude\\\",[])+[\\\"/cast/*\\\",\\\"/_astro/\\\"])); json.dump(d,open(f,\\\"w\\\"),indent=2); [shutil.copy2(os.path.join(\\\"public/cast\\\",x),os.path.join(\\\"dist/cast\\\",x)) for x in os.listdir(\\\"public/cast\\\") if x.endswith(\\\".jpg\\\")]\""
+    "deploy": "npm run build && wrangler pages deploy dist"
   },
   "dependencies": {
     "astro": "^4.16.0"
